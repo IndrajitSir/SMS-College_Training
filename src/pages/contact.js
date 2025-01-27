@@ -1,10 +1,10 @@
 import React from "react";
 
-function Home(){
+function Contact(){
     return(
         <div>
             <center>
-            Home Page
+            Contact Page
             </center>
         </div>
     )
@@ -12,4 +12,5 @@ function Home(){
     
 }
 
-export default Home
+export default Contact
+
