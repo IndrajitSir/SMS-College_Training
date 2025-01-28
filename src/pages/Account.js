@@ -2,7 +2,11 @@ import React from 'react'
 
 function Account() {
   return (
-    <div>Account</div>
+    <div>
+      <h1>
+      Account Page
+      </h1>
+    </div>
   )
 }
 
