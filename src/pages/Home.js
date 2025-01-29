@@ -17,10 +17,8 @@ function Home() {
                     throw new Error("Network response was not OK!")
                 }
                 const result = await response.json();
-                console.log(result);
-                
+                console.log(`result: ${result}`);
                 setValue(result);
-                console.log(`value: ${value}`);
                 
             } catch (error) {
                 setError(error);
@@ -30,24 +28,25 @@ function Home() {
         }
         fetchData();
     }, [])
+
+    useEffect(()=>{
+        console.log(`value: ${value}`);
+    },[value])
     return (
         <div>
             <center>
-                <h1>
-                    Home Page
-                </h1>
+                <h1> Home Page </h1>
                 <button onClick={handleClick}>Click here</button>
                 <h2>{`value=${data}`}</h2>
                 <hr />
                 <ul>
                     {
-                        
-                        value.map((values) => {
+                        value.map((values) => (
                             <li key={values.id} style={{ display: 'flex' }}>
                                 <h4>{values.id}</h4>
                                 <h4>&nbsp;{values.title}</h4>
                             </li>
-                        })
+                        ))
                     }
                 </ul>
             </center>
