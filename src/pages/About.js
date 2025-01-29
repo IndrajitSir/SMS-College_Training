@@ -1,20 +1,18 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-function About(){
-    return(
+function About() {
+    return (
         <div>
             <center>
-            <h1>
-            About Page
-            </h1>
+                <h1> About Page </h1>
+            </center>
             <Link to='/about/profile'>Profile</Link>
             <Link to='/about/account'>Account</Link>
-            </center>
-            <Outlet/>
+            <Outlet />
         </div>
     )
-        
-    
+
+
 }
 
 export default About
