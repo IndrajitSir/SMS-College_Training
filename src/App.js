@@ -17,9 +17,14 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<Home/>}></Route>
-          <Route path="/about" element={<About/>}></Route>
+          {/* <Route path="/about" element={<About/>}></Route>
             <Route path="about/profile" element={<Profile/>}></Route>
-            <Route path="about/account" element={<Account/>}></Route>
+            <Route path="about/account" element={<Account/>}></Route> */}
+            {/* currect way for nested routing, watch out them self closing tags. */}
+          <Route path="/about" element={<About/>}>  
+            <Route path="profile" element={<Profile/>} />
+            <Route path="account" element={<Account/>} />
+          </Route>
           <Route path="/contact" element={<Contact/>}></Route>
         </Routes>
       </BrowserRouter>
